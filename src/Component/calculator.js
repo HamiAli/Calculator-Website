@@ -19,14 +19,11 @@ function Calculator() {
   };
   const calculate = () => {
     try {
-      setState(eval(state).toString());
+      setState(eval()(state).toString());
     } catch (err) {
       setState("Not Valid Num ");
     }
   };
-  // if(state.length > 14){
-  //   return setState("")
-  //   }
   return (
     <>
       <div className="container">
@@ -39,7 +36,6 @@ function Calculator() {
         </form>
         <div className="keypad">
           <button
-            className="Color"
             id="clear"
             className="color"
             onClick={clear}
